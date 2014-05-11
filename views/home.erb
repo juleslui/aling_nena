@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Welcome</title>
+<style>
+  body { 
+     background: url('Background.jpg') no-repeat center center fixed;    
+     background-size:cover;
+  }
+  </style>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="AboutUs">About</a></li>
+          <li><a href="products"> All Products</a></li>
+        </ul>
+        <h3 class="text-muted">Aling Nena's</h3>
+      </div>
+      <img src="Aling Nena Sarisari Store.jpg" height=400 width 200/>
+      <div class="container">
+        <h2>Featured Products</h2>
+        <p><a class="btn btn-lg btn-success" href="products" role="button">All Products</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4><%= @products[0].name %></h4>
+          <p><%= "Remaining quantity: #{@products[0].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[1].name %></h4>
+          <p><%= "Remaining quantity: #{@products[1].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[2].name %></h4>
+          <p><%= "Remaining quantity: #{@products[2].quantity}" %></p>
+          <br>
+        </div>
+
+        <div class="col-lg-6">
+          <h4><%= @products[3].name %></h4>
+          <p><%= "Remaining quantity: #{@products[3].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[4].name %></h4>
+          <p><%= "Remaining quantity: #{@products[4].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[5].name %></h4>
+          <p><%= "Remaining quantity: #{@products[5].quantity}" %></p>
+          <br>
+        </div>
+
+        <div class="col-lg-6">
+          <h4><%= @products[6].name %></h4>
+          <p><%= "Remaining quantity: #{@products[6].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[7].name %></h4>
+          <p><%= "Remaining quantity: #{@products[7].quantity}" %></p>
+          <br>
+        </div>
+
+        <div class="col-lg-6">
+          <h4><%= @products[8].name %></h4>
+          <p><%= "Remaining quantity: #{@products[8].quantity}" %></p>
+          <br>
+
+          <h4><%= @products[9].name %></h4>
+          <p><%= "Remaining quantity: #{@products[9].quantity}" %></p>
+          <br>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>&copy; Company 2014</p>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

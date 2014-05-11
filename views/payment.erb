@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>All Products : Aling Nena </title>
+<style>
+  body { 
+     background: url('Background.jpg') no-repeat center center fixed;    
+     background-size:cover;
+  }
+  </style>
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/css/admin.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Aling Nena</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <h1>Now Buying...</h1>
+        <form role="form" method="POST" action="<%="/bought/#{@product.id}" %>">
+          <form class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="name" class="col-sm-2 control-label">Name</label>
+              <div class="col-sm-10">
+                <p><%= @product.name %></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="price" class="col-sm-2 control-label">Price</label>
+              <div class="col-sm-10">
+                <p name="price"><%= @product.price %></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quantityr" class="col-sm-2 control-label">Quantity Remaining</label>
+              <div class="col-sm-10">
+                <p><%= @product.quantity %></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="quantity" class="col-sm-2 control-label">Quantity to Buy</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" name="quantity" placeholder="Enter quantity of product you wish to buy" value="<%= @product.quantity %>">
+              </div>
+            </div>
+            <br>
+            <br>
+            <h1>Input your denomination</h1>
+            <div class="col-lg-6">
+          <label>1(s)</label>
+          <input type="text" name="ones" placeholder="Enter quantity of denomination" value=0>
+          <br>
+          <label>5(s)</label>
+          <input type="text" name="fives" placeholder="Enter quantity of denomination" value=0>
+          <br>
+
+          <label>10(s)</label>
+          <input type="text" name="tens" placeholder="Enter quantity of denomination" value=0>
+          <br>
+
+          <label>20(s)</label>
+          <input type="text" name="twenties" placeholder="Enter quantity of denomination" value=0>
+          <br>
+        </div>
+
+        <div class="col-lg-6">
+          <label>50(s)</label>
+          <input type="text" name="fifties" placeholder="Enter quantity of denomination" value=0>
+          <br>
+
+          <label>100(s)</label>
+          <input type="text" name="hundreds" placeholder="Enter quantity of denomination" value=0>
+          <br>
+
+          <label>500(s)</label>
+          <input type="text" name="five_hundreds" placeholder="Enter quantity of denomination" value=0>
+          <br>
+
+          <label>1000(s)</label>
+          <input type="text" name="thousands" placeholder="Enter quantity of denomination" value=0>
+          <br>
+        </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default btn-primary"><%= "Buy #{@product.name}" %></button>
+                <a href="/products" class="btn btn-default">Back to Product List</a>
+              </div>
+            </div>
+          </form>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

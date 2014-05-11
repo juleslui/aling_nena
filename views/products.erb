@@ -37,8 +37,6 @@
     </div>
 
     <div class="container">
-
-      <div class="admin">
         <h1>All Products</h1>
         <table class="table table-striped">
           <thead>
@@ -47,7 +45,6 @@
               <td>Name</td>
               <td>Price</td>
               <td>Quantity</td>
-              <td>Sold</td>
             </tr>
           </thead>
           <tbody>
@@ -57,15 +54,11 @@
               <td><%= product.name %></td>
               <td><%= product.price %></td>
               <td><%= product.quantity %></td>
-              <td><%= product.sold %></td>
-              <td><a href="/edit_product/<%= product.id %>" class="btn btn-default btn-primary">Edit</a></td>
-              <td><a href="/delete_product/<%= product.id %>" class="btn btn-default btn-danger">Delete</a></td>
+              <td><a href="/payment/<%= product.id %>" class="btn btn-default btn-primary">Buy!</a></td>
             </tr>
-			<% end %>          
-			</tbody>          
+            <% end %>
+          </tbody>
         </table>
-        <a href="/new_product" class="btn btn-default">Create New Product</a>
-      </div>
 
     </div><!-- /.container -->
 
